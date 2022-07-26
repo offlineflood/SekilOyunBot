@@ -397,11 +397,7 @@ bot.command("info", async (ctx) => {
     const getUserInfo = await ctx.telegram.getChat(Id);
     const getUser = [getUserInfo].map(kullaniciProfil).join(', ')
     if (photoId) {
-        return ctx.replyWithPhoto(photoId, { caption: getUser, parse_mode: 'HTML', reply_to_message_id: messageId  })
-    } else {
-        return ctx.replyWithHTML(getUser,  { reply_to_message_id: messageId })
-    }
-});
+        return ctx.replyWithPhoto(photoId, { caption: getUser, parse_mode: 'HTML', reply_to_message_id: messageId  })} else {return ctx.replyWithHTML(getUser,  { reply_to_message_id: messageId })}});
 
 bot.command('id', async (ctx, next) => {
 	if (ctx.chat.type !== "supergroup") return null;
