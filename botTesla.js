@@ -80,8 +80,8 @@ const OyunYaratHusnuEhedov = chatId => {
 
 
 const ozelMesaj = isGroup => Degisken(`
-    *🤖Salam Mənim adım [K.M Səkil Oyun Botu](http://t.me/KMSekilOyunBot) \nŞəkillərin yaşları təxmin edərək əyləncə vaxd keçirmək üçün yaradılmış şəkil təxmin bot.\n\n🤖Ətrafli Məlumat üçün /help əmrinə toxunun.*
-    ${isGroup ? "" : "\n*[K.M Səkil Oyun Botunan](http://t.me/KMSekilOyunBot) Əyləncəli vaxd keçirmək üçün aşağıdakı qrupa əlavə ed Buttona Toxunaraq qrupunuza əlavə edin.*"}
+    🤖Salam Mənim adım [K.M Səkil Oyun Botu](http://t.me/KMSekilOyunBot) \nŞəkillərin yaşları təxmin edərək əyləncə vaxd keçirmək üçün yaradılmış şəkil təxmin bot.
+    ${isGroup ? "" : "\n[K.M Səkil Oyun Botunan](http://t.me/KMSekilOyunBot) Əyləncəli vaxd keçirmək üçün aşağıdakı qrupa əlavə ed Buttona Toxunaraq qrupunuza əlavə edin.\n\n🤖Ətrafli Məlumat üçün /help əmrinə toxunun."}
 `)
 
 const YasOyunBaslat = () => {  // OYUN RESİM ALMASI GEREK DOSYA KONUM 
@@ -171,9 +171,9 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 	answers = answers.sort((a, b) => oyunDurumuHusnuEhedov[chatId].answersOrder.indexOf(a.memberId) - oyunDurumuHusnuEhedov[chatId].answersOrder.indexOf(b.memberId))
 
 	return Degisken(`
-		*🆚➪ Raund ${round + 1}/${process.env.RAUND_SAYI}*
+		* 🆚➪ Raund ${round + 1}/${process.env.RAUND_SAYI} *
 		❔ Sizcə bu adam neçə yaşındadır.
-		${answers.length > 10 ? 
+		${answers.length > 0 ? 
 			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n")}\n`
 			:
 			""
@@ -536,9 +536,9 @@ bot.on("message", async (ctx) => {
 		) {
 			let firstName = message.from.first_name
 			let answer = Number(message.text)
-			if (answer <= 10 || answer > 70) {
+			if (answer <= 0 || answer > 100) {
 				return ctx.reply(
-					"Cavab limiti. (10 - 70)",
+					"Cavab limiti. (1 - 100)",
 					{
 						reply_to_message_id: ctx.message.message_id,
 					}
