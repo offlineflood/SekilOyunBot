@@ -1,0 +1,2 @@
+# SekilOyunBot
+Sekil Oyun Bot,
