@@ -78,10 +78,11 @@ const OyunYaratHusnuEhedov = chatId => {
 	return oyunDurumuHusnuEhedov[chatId]
 }
 
-const ozelMesaj = isGroup => Degisken(`
-    🤖Salam Mənim adım [K.M Səkil Oyun Botu](http://t.me/KMSekilOyunBot), \nŞəkillərin yaşları təxmin edərək əyləncə vaxd keçirmək üçün yaradılmış şəkil təxmin bot.\n\n🤖Ətrafli Məlumat üçün /help əmrinə toxunun.
-`)
 
+const ozelMesaj = isGroup => Degisken(`
+    *🤖Salam Mənim adım [K.M Səkil Oyun Botu](http://t.me/KMSekilOyunBot) \nŞəkillərin yaşları təxmin edərək əyləncə vaxd keçirmək üçün yaradılmış şəkil təxmin bot.\n\n🤖Ətrafli Məlumat üçün /help əmrinə toxunun.*
+    ${isGroup ? "" : "\n*[K.M Səkil Oyun Botunan](http://t.me/KMSekilOyunBot) Əyləncəli vaxd keçirmək üçün aşağıdakı qrupa əlavə ed Buttona Toxunaraq qrupunuza əlavə edin.*"}
+`)
 
 const YasOyunBaslat = () => {  // OYUN RESİM ALMASI GEREK DOSYA KONUM 
 	let imagePath = "./resimler"
