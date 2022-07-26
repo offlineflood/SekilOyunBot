@@ -167,17 +167,8 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 	})
 	answers = answers.sort((a, b) => oyunDurumuHusnuEhedov[chatId].answersOrder.indexOf(a.memberId) - oyunDurumuHusnuEhedov[chatId].answersOrder.indexOf(b.memberId))
 
-	return Degisken('
-		* 🆚➪ Raund ${round + 1}/${process.env.RAUND_SAYI} *
-		❔ Sizcə bu adam neçə yaşındadır.
-		${answers.length > 0 ? 
-			' \n${answers.map((member, index) => '${index + 1}. *${member.firstName}*: ${member.answer}' ).join("\n")}\n'
-			:
-			""
-		}
-		${"⚡️".repeat(time)}${"✨".repeat(config.emojiSaniye - time)}
-	')
-}
+	return Degisken(` * 🆚➪ Raund ${round + 1}/${process.env.RAUND_SAYI} *	❔ Sizcə bu adam neçə yaşındadır.${answers.length > 0 ? ` \n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}` ).join("\n")}\n`	:	""	}${"⚡️".repeat(time)}${"✨".repeat(config.emojiSaniye - time)}`)}
+
 const OyunHusnuEhedov = (ctx, chatId) => {
 	let gameState = OyunYaratHusnuEhedov(chatId)
 	let startRound = async round => {
