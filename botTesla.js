@@ -169,7 +169,9 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 
 	return Degisken(`  🆚 Raund ${round + 1}/${process.env.RAUND_SAYI} 	
 	                
-			❔ Sizcə bu adam neçə yaşındadır ${answers.length > 0 ? 
+			❔ Sizcə bu adam neçə yaşındadır
+                         
+                           ${answers.length > 0 ? 
 			
 			` \n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}` ).join("\n")}\n`	
 			
