@@ -177,7 +177,7 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 			
 			""	
 			
-			}${"⚡️".repeat(time)}${"✨".repeat(config.emojiSaniye - time)}`)},
+			}${"⚡️".repeat(time)}${"✨".repeat(config.emojiSaniye - time)}`)}
 
 
 const OyunHusnuEhedov = (ctx, chatId) => {
