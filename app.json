@@ -1,28 +1,28 @@
 {
-  "name": "Tesla Game V1 Versiyon",
-  "description": " @TeslaGameBot'un Eski Alt Versiyon Projesi GitHub'da Kullanıcılara Açık Sunuldu.",
-  "repository": "https://github.com/sirincay/TeslaGamev1",
-  "logo": "https://avatars.githubusercontent.com/u/88708263?s=96&v=4",
+  "name": "Sekil Oyun Bot",
+  "description": "@KMSekilOyunBot un Old Subversion Project GitHub-da istifadəçilər üçün əlçatandır.",
+  "repository": "https://github.com/offlineflood/SekilOyunBot",
+  "logo": "https://graph.org/file/277dafe5aea83b0c9118d.jpg",
   "keywords": ["telegram", "bot"],
   "env": {
     "TOKEN": {
-      "description": "@BotFather'dan oluşturduğunuz botun tokeni.",
-      "value": "5387573671:AAGzNu_39T1sumOmUOQGOU2AJbsXNtuBxI0"
+      "description": "@BotFather-dən yaratdığınız botun işarəsi.",
+      "value": ""
     },
     "ID_BOT": {
-      "description": "Botun ID Yazın (İlk Rakamlar)",
-      "value": "5387573671"
+      "description": "Botun ID-sini yazın (Birinci Rəqəmlər)",
+      "value": ""
     },
     "BOT_ISMI": {
-      "description": "Botun Kullanıcı Adını '@' Olmadan Yazın",
-      "value": "KsjdjdhheududueeuBOT"
+      "description": "Botun istifadəçi adını '@' olmadan yazın",
+      "value": ""
     },
     "RAUND_SAYI": {
-      "description": "RAUND SAYISI (3-5) İdeal aralık ",
+      "description": "ROUND NÖMRƏSİ (3-5) İdeal diapazon ",
       "value": "3"
     },
     "SANIYE": {
-      "description": "Resimlerin Değişmesi Süresi / 10000=10 Saniye",
+      "description": "Şəkilləri Dəyişmək Vaxtı / 10000=10 Saniyə",
       "value": "10000"
       }
   },
